@@ -48,25 +48,19 @@ const ElementPalette: React.FC<ElementPaletteProps> = ({ elements }) => {
             <div
               key={element.id}
               className={`p-4 rounded-lg cursor-grab transition-all duration-200 ${
-                isDarkMode
-                  ? "bg-gray-800 hover:bg-gray-700"
-                  : "bg-gray-100 hover:bg-gray-200"
+                isDarkMode ? "bg-gray-800 hover:bg-gray-700" : "bg-gray-100 hover:bg-gray-200"
               }`}
               draggable
               onDragStart={(e) => onDragStart(e, element)}
             >
               <div className="flex items-center gap-3">
-                <div
-                  className="p-3 rounded-md"
-                  style={{ backgroundColor: element.color }}
-                >
+                <div className="p-3 rounded-md" style={{ backgroundColor: element.color }}>
                   <IconComponent className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="font-medium">{element.name}</h3>
                   <p className="text-xs opacity-70">
-                    {element.width}x{element.height} ({widthBlocks}x
-                    {heightBlocks} blocks)
+                    {element.width}x{element.height} ({widthBlocks}x{heightBlocks} blocks)
                   </p>
                 </div>
               </div>
